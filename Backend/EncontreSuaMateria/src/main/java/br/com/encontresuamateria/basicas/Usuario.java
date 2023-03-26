@@ -1,9 +1,11 @@
 package br.com.encontresuamateria.basicas;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Usuario {
@@ -15,7 +17,9 @@ public class Usuario {
 	private String cpf;
 	private String dataNascimento;
 	private String telefone;
+	@OneToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
+	@OneToOne
 	private Conta conta;
 	
 	
