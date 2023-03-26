@@ -16,6 +16,7 @@ public class Usuario {
 	private String dataNascimento;
 	private String telefone;
 	private Endereco endereco;
+	private Conta conta;
 	
 	
 	public long getId() {
@@ -58,6 +59,21 @@ public class Usuario {
 	}
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+	public Conta getConta() {
+		return this.conta;
+	}
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
+	
+	public void criaConta(String usuario, String email, String senha) {
+		
+	}
+	public void tipoContaProfessor() {}
+	
+	public void tipoContaAluno() {
+		
 	}
 	
 	

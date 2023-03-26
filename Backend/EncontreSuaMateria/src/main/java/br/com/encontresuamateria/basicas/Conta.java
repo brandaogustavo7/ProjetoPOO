@@ -42,7 +42,10 @@ public class Conta {
 		return senha;
 	}
 	public void setSenha(String senha) {
-		this.senha = senha;
+		if(senha.length() >= 8) {
+			this.senha = senha;
+	}else {
+		System.out.println("Sua senha foi é invalida");}
 	}
 	
 	
