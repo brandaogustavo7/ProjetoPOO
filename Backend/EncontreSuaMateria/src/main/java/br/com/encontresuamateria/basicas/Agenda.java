@@ -2,15 +2,18 @@ package br.com.encontresuamateria.basicas;
 
 public abstract class Agenda {
 	
-	private String dia;
+	private String diaSemana;
 	private String turno;
-	private String hora;
+	private int tempoAula;
 	
-	public String getDia() {
-		return dia;
+	public Agenda() {}
+	
+	public String getDiaSemana() {
+		return diaSemana;
 	}
-	public void setDia(String dia) {
-		this.dia = dia;
+
+	public void setDiaSemana(String diaSemana) {
+		this.diaSemana = diaSemana;
 	}
 	
 	public String getTurno() {
@@ -19,12 +22,13 @@ public abstract class Agenda {
 	public void setTurno(String turno) {
 		this.turno = turno;
 	}
-	
-	public String getHora() {
-		return hora;
+
+	public int getTempoAula() {
+		return tempoAula;
 	}
-	public void setHora(String hora) {
-		this.hora = hora;
+
+	public void setTempoAula(int tempoAula) {
+		this.tempoAula = 60;
 	}
 	
 }

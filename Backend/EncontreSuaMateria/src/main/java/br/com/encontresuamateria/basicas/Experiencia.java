@@ -6,7 +6,8 @@ public abstract class Experiencia {
 	private String empresa;
 	private String dataInicio;
 	private String dataFim;
-	private String descricao;
+	
+	public Experiencia () {}
 	
 	public String getCargo() {
 		return cargo;
@@ -34,13 +35,6 @@ public abstract class Experiencia {
 	}
 	public void setDataFim(String dataFim) {
 		this.dataFim = dataFim;
-	}
-	
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
 	}
 	
 }

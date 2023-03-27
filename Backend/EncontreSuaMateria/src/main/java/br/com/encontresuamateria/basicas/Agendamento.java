@@ -8,6 +8,8 @@ public abstract class Agendamento {
 	private String horaFim;
 	private String data;
 	
+	public Agendamento () {}
+	
 	public String getDisciplina() {
 		return disciplina;
 	}
