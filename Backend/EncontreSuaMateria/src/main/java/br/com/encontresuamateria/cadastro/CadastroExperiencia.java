@@ -21,7 +21,7 @@ public class CadastroExperiencia implements InterfaceCadastroExperiencia{
 
 	@Override
 	public List<Experiencia> procurarExperiencia(String empresa) {
-		return colecaoExperiencia.findByNomeContaining(empresa);
+		return colecaoExperiencia.findByEmpresaContaining(empresa);
 	}
 
 	@Override

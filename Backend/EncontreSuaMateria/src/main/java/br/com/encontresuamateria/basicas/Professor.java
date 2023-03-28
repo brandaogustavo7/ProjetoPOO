@@ -1,5 +1,8 @@
 package br.com.encontresuamateria.basicas;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,12 +18,12 @@ public class Professor extends Conta{
 	private long id;
 	private String disciplinas;
 	private float valorHoraAula;
-	@OneToOne
-	private Formacao formacao;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Formacao> formacao;
 	@OneToOne
 	private Agenda agenda;
-	@OneToOne
-	private Experiencia experiencia;
+	@OneToMany
+	private List<Experiencia> experiencia;
 	
 	public long getId() {
 		return id;
@@ -43,10 +46,11 @@ public class Professor extends Conta{
 		this.valorHoraAula = valorHoraAula;
 	}
 	
-	public Formacao getFormacao() {
+	
+	public List<Formacao> getFormacao() {
 		return formacao;
 	}
-	public void setFormacao(Formacao formacao) {
+	public void setFormacao(List<Formacao> formacao) {
 		this.formacao = formacao;
 	}
 	public Agenda getAgenda() {
@@ -55,10 +59,10 @@ public class Professor extends Conta{
 	public void setAgenda(Agenda agenda) {
 		this.agenda = agenda;
 	}
-	public Experiencia getExperiencia() {
+	public List<Experiencia> getExperiencia() {
 		return experiencia;
 	}
-	public void setExperiencia(Experiencia experiencia) {
+	public void setExperiencia(List<Experiencia> experiencia) {
 		this.experiencia = experiencia;
 	}
 	

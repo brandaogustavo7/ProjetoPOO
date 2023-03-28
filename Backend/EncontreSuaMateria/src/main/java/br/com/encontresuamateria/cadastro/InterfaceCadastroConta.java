@@ -10,7 +10,5 @@ public interface InterfaceCadastroConta {
 	
 	List<Conta> procurarContaEmail(String email);
 	
-	Conta salvarConta(Conta c);
-	
-	void deletarConta(Conta c);
+
 }

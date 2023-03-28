@@ -21,7 +21,7 @@ public class CadastroAgendamento implements InterfaceCadastroAgendamento{
 
 	@Override
 	public List<Agendamento> procurarAgendamento(String disciplina) {
-		return colecaoAgendamento.findByNomeContaining(disciplina);
+		return colecaoAgendamento.findByDisciplinaContaining(disciplina);
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class CadastroAgenda implements InterfaceCadastroAgenda{
 
 	@Override
 	public List<Agenda> procurarAgenda(String diaSemana) {
-		return colecaoAgenda.findByNomeContaining(diaSemana);
+		return colecaoAgenda.findByDiaSemanaContaining(diaSemana);
 	}
 
 	@Override
