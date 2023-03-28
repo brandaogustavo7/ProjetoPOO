@@ -8,6 +8,6 @@ import br.com.encontresuamateria.basicas.Conta;
 
 public interface ColecaoConta extends JpaRepository<Conta, Long>{
 	
-	public List<Conta> indByNomeContaining(String email);
+	public List<Conta> findByNomeContaining(String email);
 
 }

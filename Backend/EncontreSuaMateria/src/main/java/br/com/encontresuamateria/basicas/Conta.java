@@ -15,8 +15,6 @@ public class Conta {
 	private String email;
 	private String senha;
 	
-	
-	
 	public long getId() {
 		return id;
 	}
@@ -47,7 +45,5 @@ public class Conta {
 	}else {
 		System.out.println("Sua senha foi é invalida");}
 	}
-	
-	
 
 }

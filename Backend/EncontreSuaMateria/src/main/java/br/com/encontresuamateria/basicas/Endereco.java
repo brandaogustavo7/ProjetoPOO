@@ -18,7 +18,6 @@ public class Endereco {
 	private String cidade;
 	private String uf;
 	
-	
 	public long getId() {
 		return id;
 	}
@@ -67,6 +66,5 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
-	
 	
 }

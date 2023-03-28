@@ -1,6 +1,6 @@
 package br.com.encontresuamateria.basicas;
 
-public abstract class Agenda {
+public class Agenda {
 	
 	private String diaSemana;
 	private String turno;

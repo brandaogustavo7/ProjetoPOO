@@ -1,6 +1,6 @@
 package br.com.encontresuamateria.basicas;
 
-public abstract class Experiencia {
+public class Experiencia {
 	
 	private String cargo;
 	private String empresa;

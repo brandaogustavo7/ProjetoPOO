@@ -1,6 +1,6 @@
 package br.com.encontresuamateria.basicas;
 
-public abstract class Agendamento {
+public class Agendamento {
 	
 	private String disciplina;
 	private String professor;

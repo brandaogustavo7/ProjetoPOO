@@ -8,7 +8,6 @@ import br.com.encontresuamateria.basicas.Usuario;
 
 public interface ColecaoUsuarios extends JpaRepository<Usuario, Long>{
 	
-	public List<Usuario> findByNomeContaining(String usuario);
+	public List<Usuario> findByNomeContaining(String nome);
 	
-
 }
