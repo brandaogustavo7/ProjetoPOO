@@ -16,7 +16,6 @@ public class Agenda {
 	
 	public Agenda() {}
 	
-	
 	public long getId() {
 		return id;
 	}

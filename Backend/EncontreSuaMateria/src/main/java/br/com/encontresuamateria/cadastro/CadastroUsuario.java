@@ -3,10 +3,12 @@ package br.com.encontresuamateria.cadastro;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.encontresuamateria.basicas.Usuario;
 import br.com.encontresuamateria.colecaodedados.ColecaoUsuarios;
 
+@Service
 public class CadastroUsuario implements InterfaceCadastroUsuario{
 	
 	@Autowired
