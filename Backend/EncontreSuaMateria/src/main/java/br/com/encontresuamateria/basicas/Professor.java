@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Professor extends Conta{
@@ -13,8 +15,11 @@ public class Professor extends Conta{
 	private long id;
 	private String disciplinas;
 	private float valorHoraAula;
+	@OneToOne
 	private Formacao formacao;
+	@OneToOne
 	private Agenda agenda;
+	@OneToOne
 	private Experiencia experiencia;
 	
 	public long getId() {
