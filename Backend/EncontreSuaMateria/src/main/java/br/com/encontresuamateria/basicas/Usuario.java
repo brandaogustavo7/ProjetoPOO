@@ -9,9 +9,9 @@ import jakarta.persistence.OneToOne;
 
 @Entity
 public class Usuario {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private long id;
 	private String nome;
 	private String cpf;
@@ -22,6 +22,7 @@ public class Usuario {
 	@OneToOne
 	private Conta conta;
 	
+	public Usuario() {}
 	
 	public long getId() {
 		return id;
@@ -64,6 +65,7 @@ public class Usuario {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	
 	public Conta getConta() {
 		return this.conta;
 	}

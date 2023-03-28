@@ -12,9 +12,9 @@ import jakarta.persistence.OneToOne;
 
 @Entity
 public class Professor extends Conta{
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private long id;
 	private String disciplinas;
 	private float valorHoraAula;
@@ -24,6 +24,8 @@ public class Professor extends Conta{
 	private Agenda agenda;
 	@OneToMany
 	private List<Experiencia> experiencia;
+	
+	public Professor () {}
 	
 	public long getId() {
 		return id;
@@ -53,12 +55,14 @@ public class Professor extends Conta{
 	public void setFormacao(List<Formacao> formacao) {
 		this.formacao = formacao;
 	}
+	
 	public Agenda getAgenda() {
 		return agenda;
 	}
 	public void setAgenda(Agenda agenda) {
 		this.agenda = agenda;
 	}
+	
 	public List<Experiencia> getExperiencia() {
 		return experiencia;
 	}

@@ -1,9 +1,11 @@
 package br.com.encontresuamateria.basicas;
 
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 @Entity
 public class Agendamento {
 	
@@ -17,8 +19,6 @@ public class Agendamento {
 	private String data;
 	
 	public Agendamento () {}
-	
-	
 	
 	public long getId() {
 		return id;

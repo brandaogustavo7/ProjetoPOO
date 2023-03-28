@@ -7,13 +7,15 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Conta {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private long id;
 	private String usuario;
 	private String email;
 	private String senha;
+	
+	public Conta () {}
 	
 	public long getId() {
 		return id;

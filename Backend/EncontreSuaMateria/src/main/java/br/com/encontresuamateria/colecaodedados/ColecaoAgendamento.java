@@ -9,5 +9,6 @@ import br.com.encontresuamateria.basicas.Agendamento;
 
 @Repository
 public interface ColecaoAgendamento extends JpaRepository<Agendamento, Long>{
+	
 	public List<Agendamento> findByDisciplinaContaining(String disciplina);
 }

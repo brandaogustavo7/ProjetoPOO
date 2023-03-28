@@ -9,5 +9,7 @@ import br.com.encontresuamateria.basicas.Experiencia;
 
 @Repository
 public interface ColecaoExperiencia extends JpaRepository<Experiencia, Long>{
+	
 	public List<Experiencia> findByEmpresaContaining(String empresa);
+	
 }

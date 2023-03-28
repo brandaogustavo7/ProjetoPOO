@@ -9,5 +9,6 @@ import br.com.encontresuamateria.basicas.Agenda;
 
 @Repository
 public interface ColecaoAgenda extends JpaRepository<Agenda, Long>{
+	
 	public List<Agenda> findByDiaSemanaContaining(String diaSemana);
 }

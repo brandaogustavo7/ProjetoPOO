@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Formacao {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -14,6 +15,7 @@ public class Formacao {
 	private String curso;
 	private String dataFormacao;
 	
+	public Formacao() {}
 	
 	public long getId() {
 		return id;

@@ -7,9 +7,9 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Endereco {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private long id;
 	private String logradouro;
 	private String numero;
@@ -19,7 +19,6 @@ public class Endereco {
 	private String uf;
 	
 	public Endereco() {}
-	
 	
 	public long getId() {
 		return id;
