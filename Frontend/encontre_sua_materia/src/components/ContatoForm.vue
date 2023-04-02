@@ -39,7 +39,6 @@ export default {
 }
 
 #main-form h1 {
-    margin-top: 50px;
     font-size: 2em;
     margin-bottom: 1em;
     text-align: center;

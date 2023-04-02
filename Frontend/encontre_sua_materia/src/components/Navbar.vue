@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
         <router-link to="/" id="logo-url">
-            <img :src="logo" :alt="alt" id="logo">
+        <a href="/Home"></a><img :src="logo" :alt="alt" id="logo">
         </router-link>
 
         <div id="search-container">
