@@ -13,6 +13,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
   },
   {
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: () => import(/* webpackChunkName: "cadastro" */ '../views/Cadastro.vue')
+  },
+  {
     path: '/perfil',
     name: 'Perfil',
     component: () => import(/* webpackChunkName: "perfil" */ '../views/Perfil.vue')

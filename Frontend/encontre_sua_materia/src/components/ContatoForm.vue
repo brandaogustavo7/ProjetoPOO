@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #main-form {
     display: flex;
@@ -85,6 +85,7 @@ export default {
 #main-form button[type="submit"] {
     background-color: #007bff;
     color: #fff;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;

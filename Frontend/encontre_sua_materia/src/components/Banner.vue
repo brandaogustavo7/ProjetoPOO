@@ -8,6 +8,9 @@
                 suas dificuldades em qualquer disciplina. Oferecemos recursos exclusivos,como materiais
                 idáticos atualizados, aulas personalizadas, e acompanhamento constante do seu progresso.
             </p>
+            <a href="/Cadastro">
+            <button>Cadastre-se</button>
+            </a>
         </div>
     </div>
 </template>
@@ -49,4 +52,21 @@ export default {
         width: 35%;
         margin-left: 50px;
    }
+
+   #texto button {
+    background-color: #0056b3;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#texto button:hover {
+    background-color: #007bff;
+}
 </style>

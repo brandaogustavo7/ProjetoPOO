@@ -1,10 +1,7 @@
-
-import Navbar from './components/Navbar.vue';
-
 <template>
   <Navbar :logo="logo_src" :alt="app_name"/>
   <router-view/>
-  <Footer />
+  <Footer/>
 </template>
 
 <script>

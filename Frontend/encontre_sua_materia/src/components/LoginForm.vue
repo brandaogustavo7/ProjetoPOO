@@ -11,7 +11,7 @@
         <button type="submit">Entrar</button>
     </form>
     
-    <p>Não possui uma conta? <a href="#">Cadastre-se</a></p>
+    <p>Não possui uma conta? <a href="/Cadastro">Cadastre-se</a></p>
     </div>
 </template>
 <script>
@@ -20,7 +20,7 @@ export default {
 }
 
 </script>
-<style>
+<style scoped>
 #main-login {
     max-width: 400px;
     margin: 0 auto;
@@ -71,6 +71,7 @@ export default {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 15px;
 }
 
 #main-login button[type="submit"]:hover {
