@@ -10,6 +10,7 @@ import br.com.encontresuamateria.basicas.Professor;
 @Repository
 public interface ColecaoProfessor extends JpaRepository<Professor, Long>{
 	
+	public List<Professor> findByNomeContaining(String nome);
 	public List<Professor> findByEmailContaining(String email);
 
 }
