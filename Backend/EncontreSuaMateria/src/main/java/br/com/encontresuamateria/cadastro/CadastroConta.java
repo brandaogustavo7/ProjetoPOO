@@ -23,6 +23,22 @@ public class CadastroConta implements InterfaceCadastroConta{
 	public List<Conta> procurarContaEmail(String email) {
 		return colecaoConta.findByEmailContaining(email);
 	}
+
+	@Override
+	public Conta salvarConta(Conta c) {
+		return colecaoConta.save(c);
+	}
+
+	@Override
+	public void deletarConta(Conta c) {
+		colecaoConta.delete(c);
+	}
+
+	@Override
+	public Conta atualizarConta(Conta c) {
+		return colecaoConta.save(c);
+
+	}
 	
 
 }
