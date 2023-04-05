@@ -17,7 +17,7 @@ public class Professor extends Conta{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String nome;
-	private String disciplinas;
+	private String disciplina;
 	private float valorHoraAula;
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Formacao> formacao;
@@ -36,10 +36,10 @@ public class Professor extends Conta{
 	}
 	
 	public String getDisciplinas() {
-		return disciplinas;
+		return disciplina;
 	}
 	public void setDisciplinas(String disciplinas) {
-		this.disciplinas = disciplinas;
+		this.disciplina = disciplinas;
 	}
 	
 	public float getValorHoraAula() {

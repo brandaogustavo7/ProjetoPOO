@@ -1,12 +1,9 @@
 package br.com.encontresuamateria.basicas;
 
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Aluno extends Conta{
@@ -15,8 +12,6 @@ public class Aluno extends Conta{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String escolaridade;
-	@OneToMany
-	private List<Agendamento> agendamento;
 	
 	public Aluno () {}
 	
@@ -32,13 +27,6 @@ public class Aluno extends Conta{
 	}
 	public void setEscolaridade(String escolaridade) {
 		this.escolaridade = escolaridade;
-	}
-	
-	public List<Agendamento> getAgendamento() {
-		return agendamento;
-	}
-	public void setAgendamento(List<Agendamento> agendamento) {
-		this.agendamento = agendamento;
 	}
 	
 }

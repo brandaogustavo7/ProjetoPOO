@@ -1,5 +1,9 @@
 package br.com.encontresuamateria.basicas;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,8 +17,10 @@ public class Experiencia {
 	private long id;
 	private String cargo;
 	private String empresa;
-	private String dataInicio;
-	private String dataFim;
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private Date dataInicio;
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private Date dataFim;
 	
 	public Experiencia () {}
 	
@@ -38,19 +44,19 @@ public class Experiencia {
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
-	
-	public String getDataInicio() {
+
+	public Date getDataInicio() {
 		return dataInicio;
 	}
-	public void setDataInicio(String dataInicio) {
+	public void setDataInicio(Date dataInicio) {
 		this.dataInicio = dataInicio;
 	}
-	
-	public String getDataFim() {
+
+	public Date getDataFim() {
 		return dataFim;
 	}
-	public void setDataFim(String dataFim) {
+	public void setDataFim(Date dataFim) {
 		this.dataFim = dataFim;
 	}
-	
+		
 }
