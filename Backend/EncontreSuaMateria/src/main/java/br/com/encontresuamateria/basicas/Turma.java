@@ -1,11 +1,14 @@
 package br.com.encontresuamateria.basicas;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Turma {
@@ -13,9 +16,15 @@ public class Turma {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	@OneToMany
 	private List<Aluno> alunoMatriculado;
+	@OneToOne
 	private Professor professor;
-	private Disciplina disciplina;
+	private String disciplina;
+	
+	public Turma() {
+        this.alunoMatriculado = new ArrayList<>();
+    }
 	
 	public long getId() {
 		return id;
@@ -38,11 +47,17 @@ public class Turma {
 		this.professor = professor;
 	}
 	
-	public Disciplina getDisciplina() {
+	public String getDisciplina() {
 		return disciplina;
 	}
-	public void setDisciplina(Disciplina disciplina) {
+
+	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
 	}
+	
+
+    public void adicionarAluno(Aluno aluno) {
+        this.alunoMatriculado.add(aluno);
+    }
 	
 }

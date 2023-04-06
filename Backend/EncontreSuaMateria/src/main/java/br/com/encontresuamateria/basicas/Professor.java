@@ -2,12 +2,10 @@ package br.com.encontresuamateria.basicas;
 
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -19,11 +17,9 @@ public class Professor extends Conta{
 	private String nome;
 	private String disciplina;
 	private float valorHoraAula;
-	@OneToMany(cascade = CascadeType.ALL)
 	private List<Formacao> formacao;
 	@OneToOne
 	private Agenda agenda;
-	@OneToMany
 	private List<Experiencia> experiencia;
 	
 	public Professor () {}
