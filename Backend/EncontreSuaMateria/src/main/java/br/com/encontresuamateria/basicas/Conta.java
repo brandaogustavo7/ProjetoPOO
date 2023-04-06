@@ -1,9 +1,11 @@
 package br.com.encontresuamateria.basicas;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Conta {
@@ -14,8 +16,69 @@ public class Conta {
 	private String usuario;
 	private String email;
 	private String senha;
+	private String nome;
+	private String cpf;
+	private String dataNascimento;
+	private String telefone;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Endereco endereco;
+	@OneToOne
+	private Conta conta;
 	
-	public Conta () {}
+	public Conta() {}
+	
+	
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
+	public Conta getConta() {
+		return this.conta;
+	}
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
+	
+	public void criaConta(String usuario, String email, String senha) {
+		
+	}
+	public void tipoContaProfessor() {}
+	
+	public void tipoContaAluno() {
+		
+	}
 	
 	public long getId() {
 		return id;
@@ -47,10 +110,6 @@ public class Conta {
 	}else {
 		System.out.println("Sua senha foi é invalida");}
 	}
-	public void criarConta(String usuario, String senha, String email) {
-		this.setEmail(email);
-		this.setUsuario(usuario);
-		this.setSenha(senha);
-	}
+
 
 }

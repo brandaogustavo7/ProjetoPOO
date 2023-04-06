@@ -1,6 +1,5 @@
 package br.com.encontresuamateria.basicas;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -22,9 +21,7 @@ public class Turma {
 	private Professor professor;
 	private String disciplina;
 	
-	public Turma() {
-        this.alunoMatriculado = new ArrayList<>();
-    }
+	public Turma() {}
 	
 	public long getId() {
 		return id;
@@ -54,10 +51,5 @@ public class Turma {
 	public void setDisciplina(String disciplina) {
 		this.disciplina = disciplina;
 	}
-	
-
-    public void adicionarAluno(Aluno aluno) {
-        this.alunoMatriculado.add(aluno);
-    }
 	
 }

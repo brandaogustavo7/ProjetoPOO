@@ -1,7 +1,16 @@
 package br.com.encontresuamateria.basicas;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Endereco {
-	
+		
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	private String logradouro;
 	private String numero;
 	private String bairro;
@@ -52,5 +61,13 @@ public class Endereco {
 	public void setUf(String uf) {
 		this.uf = uf;
 	}
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	
 }
