@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Turma {
@@ -13,9 +15,17 @@ public class Turma {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	@OneToMany
 	private List<Aluno> alunoMatriculado;
+	@OneToOne
 	private Professor professor;
+	@OneToOne
 	private Disciplina disciplina;
+	
+	
+	public Turma() {
+		
+	}
 	
 	public long getId() {
 		return id;

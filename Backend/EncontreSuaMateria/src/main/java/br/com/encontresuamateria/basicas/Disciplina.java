@@ -1,6 +1,16 @@
 package br.com.encontresuamateria.basicas;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Disciplina {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	private String nome;
 
 	public Disciplina(String nome) {
@@ -15,6 +25,17 @@ public class Disciplina {
 		this.nome = nome;
 	}
 	
+	
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
 	public static final Disciplina PORTUGUES = new Disciplina ("Português");
 	public static final Disciplina MATEMATICA = new Disciplina ("Matemática");
 	public static final Disciplina HISTORIA = new Disciplina ("História");
@@ -27,4 +48,6 @@ public class Disciplina {
     public static final Disciplina FILOSOFIA = new Disciplina("Filosofia");
     public static final Disciplina SOCIOLOGIA = new Disciplina("Sociologia");
     public static final Disciplina INGLES = new Disciplina("Inglês");
+
+
 }

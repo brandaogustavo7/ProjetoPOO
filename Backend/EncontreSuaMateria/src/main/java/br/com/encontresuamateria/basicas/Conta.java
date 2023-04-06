@@ -47,10 +47,6 @@ public class Conta {
 	}else {
 		System.out.println("Sua senha foi é invalida");}
 	}
-	public void criarConta(String usuario, String senha, String email) {
-		this.setEmail(email);
-		this.setUsuario(usuario);
-		this.setSenha(senha);
-	}
+
 
 }

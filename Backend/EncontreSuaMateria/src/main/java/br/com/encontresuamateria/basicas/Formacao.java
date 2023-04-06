@@ -1,7 +1,16 @@
 package br.com.encontresuamateria.basicas;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Formacao {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 	private String instituicao;
 	private String curso;
 	private String dataFormacao;
@@ -28,5 +37,12 @@ public class Formacao {
 	public void setDataFormacao(String dataFormacao) {
 		this.dataFormacao = dataFormacao;
 	}
-	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 }
