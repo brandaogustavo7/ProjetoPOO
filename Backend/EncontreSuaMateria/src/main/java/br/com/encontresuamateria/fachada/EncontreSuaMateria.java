@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.encontresuamateria.basicas.Aluno;
 import br.com.encontresuamateria.basicas.Conta;
 import br.com.encontresuamateria.basicas.Professor;
+import br.com.encontresuamateria.cadastro.InterfaceCadastroAluno;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroConta;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroProfessor;
 
@@ -20,13 +22,19 @@ public class EncontreSuaMateria {
 	private InterfaceCadastroProfessor cadastroProfessor;
 	@Autowired
 	private InterfaceCadastroConta cadastroConta;
+	@Autowired
+	private InterfaceCadastroAluno cadastroAluno;
 	
 	public Conta procurarContaId(long id) {
 		return cadastroConta.procurarContaId(id);
 	}
-	public Professor salvarProfessor(Professor entity) {
+	public Professor criarContaProfessor(Professor entity) {
 		return cadastroProfessor.salvarProfessor(entity);
 	}
+	public Aluno criarContaAluno(Aluno entity) {
+		return cadastroAluno.salvarAluno(entity);
+	}
+	//criarachamadadoperfil
 	public List<Professor> procurarProfessorNome(String nome) {
 		return cadastroProfessor.procurarProfessorNome(nome);
 		

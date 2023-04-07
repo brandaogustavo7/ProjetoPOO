@@ -22,8 +22,7 @@ public class Conta {
 	private String telefone;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
-	@OneToOne
-	private Conta conta;
+	private boolean tipoConta;
 	
 	public Conta() {}
 	
@@ -64,12 +63,7 @@ public class Conta {
 		this.endereco = endereco;
 	}
 	
-	public Conta getConta() {
-		return this.conta;
-	}
-	public void setConta(Conta conta) {
-		this.conta = conta;
-	}
+	
 	
 	public void criaConta(String usuario, String email, String senha) {
 		
@@ -110,6 +104,19 @@ public class Conta {
 	}else {
 		System.out.println("Sua senha foi é invalida");}
 	}
+
+
+
+	public boolean isTipoConta() {
+		return tipoConta;
+	}
+
+
+
+	public void setTipoConta(boolean tipoConta) {
+		this.tipoConta = tipoConta;
+	}
+	
 
 
 }

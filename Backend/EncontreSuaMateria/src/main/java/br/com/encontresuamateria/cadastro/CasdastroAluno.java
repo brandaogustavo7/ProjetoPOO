@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.encontresuamateria.basicas.Aluno;
+
 import br.com.encontresuamateria.colecaodedados.ColecaoAluno;
 
 
@@ -16,6 +17,12 @@ public class CasdastroAluno implements InterfaceCadastroAluno{
 	public Aluno procurarAlunoId(long id) {
 		colecaoAluno.findById(id);
 		return null;
+	}
+
+	@Override
+	public Aluno salvarAluno(Aluno entity) {
+		return colecaoAluno.save(entity);
+		
 	}
 
 

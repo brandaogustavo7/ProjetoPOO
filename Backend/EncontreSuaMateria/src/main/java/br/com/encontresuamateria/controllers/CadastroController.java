@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.encontresuamateria.basicas.Aluno;
 import br.com.encontresuamateria.basicas.Professor;
 import br.com.encontresuamateria.fachada.EncontreSuaMateria;
 
@@ -14,14 +15,14 @@ public class CadastroController {
 	@Autowired
 	private EncontreSuaMateria encontre;
 	 
-	@PostMapping(value = "/home/cadastroprof")
+	@PostMapping(value = "/home/cadastrarprof")
 	public ResponseEntity<Professor> cadastrarProfessor(@RequestBody Professor professor) {
-		return ResponseEntity.ok(encontre.salvarProfessor(professor));
+		return ResponseEntity.ok(encontre.criarContaProfessor(professor));
+	}
+	@PostMapping(value = "/home/cadastraraluno")
+	public ResponseEntity<Aluno> cadastrarAluno(@RequestBody Aluno aluno) {
+		return ResponseEntity.ok(encontre.criarContaAluno(aluno));
 	}
 	
-	@PostMapping(value = "/home/cadastraraluno")
-	public void cadastrarAluno() {
-		
-	}
-
+	
 }
