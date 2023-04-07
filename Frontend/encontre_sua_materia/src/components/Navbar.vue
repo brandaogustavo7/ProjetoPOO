@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
         <router-link to="/" id="logo-url">
-        <a href="/Home"></a><img :src="logo" :alt="alt" id="logo">
+        <img :src="logo" :alt="alt" id="logo">
         </router-link>
 
         <div id="search-container">
@@ -9,9 +9,8 @@
             <button type="submit"><i class="fa fa-search"></i></button>
         </div>
 
-        <router-link to="/">Home</router-link> 
-        <router-link to="/login">Login</router-link> 
-        <!--<router-link to="/perfil">Perfil</router-link>-->
+        <!-- <router-link to="/">Home</router-link> -->
+        <router-link to="/login">Login</router-link>
     </div>
 </template>
 <script>
@@ -81,5 +80,4 @@
     #search-container button[type="submit"]:hover {
         cursor: pointer;
     }
-
 </style>

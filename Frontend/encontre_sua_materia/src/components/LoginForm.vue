@@ -3,7 +3,7 @@
     <h1>Login</h1>
     <form>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email"  required>
         
         <label for="password">Senha:</label>
         <input type="password" id="password" name="password" required>
@@ -11,7 +11,7 @@
         <button type="submit">Entrar</button>
     </form>
     
-    <p>Não possui uma conta? <a href="/Cadastro">Cadastre-se</a></p>
+    <p>Não possui uma conta? <a href="/CadastroAluno">Cadastre-se</a></p>
     </div>
 </template>
 <script>

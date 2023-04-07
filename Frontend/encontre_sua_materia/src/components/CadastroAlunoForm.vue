@@ -3,25 +3,22 @@
     <h1>Cadastro</h1>
     <form>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" v-model="email" required>
         
         <label for="name">Nome completo:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" v-model="name" required>
         
         <label for="username">Nome de usuário:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" v-model="username" required>
         
         <label for="birthdate">Data de nascimento:</label>
-        <input type="date" id="birthdate" name="birthdate" required>
-        
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" required>
-        
+        <input type="date" id="birthdate" name="birthdate" v-model="birthdate" required>
+
         <label for="phone">Telefone:</label>
-        <input type="text" id="phone" name="phone" required>
+        <input type="text" id="phone" name="phone" v-model="phone" required>
         
         <label for="sex">Sexo:</label>
-        <select id="sex" name="sex" required>
+        <select id="sex" name="sex" v-model="sex" required>
             <option value="">Selecione o sexo</option>
             <option value="male">Masculino</option>
             <option value="female">Feminino</option>
@@ -29,7 +26,7 @@
         </select>
         
         <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" v-model="password" required>
         
         <button type="submit">Cadastrar</button>
     </form>
@@ -38,7 +35,7 @@
 
 <script>
 export default {
-    name: "CadastroForm"
+    name: "CadastroAlunoForm"
 }
 </script>
 

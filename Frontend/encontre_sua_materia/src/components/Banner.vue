@@ -8,7 +8,7 @@
                 suas dificuldades em qualquer disciplina. Oferecemos recursos exclusivos,como materiais
                 idáticos atualizados, aulas personalizadas, e acompanhamento constante do seu progresso.
             </p>
-            <a href="/Cadastro">
+            <a href="/CadastroAluno">
             <button>Cadastre-se</button>
             </a>
         </div>
@@ -24,6 +24,7 @@ export default {
 <style scoped>
     #main-banner {
         background-image: url('/public/img/fundo.png');
+        background-color: #018FA6;
         background-position: 0;
         background-size: cover;
         height: 600px;

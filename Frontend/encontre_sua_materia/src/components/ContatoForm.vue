@@ -5,8 +5,8 @@ Centralize os formularios
         <h1>CONTATO</h1>
         <P>Envie a sua dúvida que assim que possível o suporte encontrará em contato com você.</P>
         <form>
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required>
 
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" required>
