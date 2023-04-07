@@ -22,7 +22,7 @@ public class Conta {
 	private String telefone;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
-	private boolean tipoConta;
+
 	
 	public Conta() {}
 	
@@ -107,16 +107,7 @@ public class Conta {
 
 
 
-	public boolean isTipoConta() {
-		return tipoConta;
-	}
 
-
-
-	public void setTipoConta(boolean tipoConta) {
-		this.tipoConta = tipoConta;
-	}
-	
 
 
 }

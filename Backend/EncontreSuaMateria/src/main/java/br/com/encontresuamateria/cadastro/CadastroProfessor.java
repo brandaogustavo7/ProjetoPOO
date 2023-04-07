@@ -27,6 +27,21 @@ public class CadastroProfessor implements InterfaceCadastroProfessor{
 	public List<Professor> listarProfessores() {
 		return colecaoProfessor.findAll();
 	}
+
+	@Override
+	public Professor procurarProfessorId(long id) {
+		return colecaoProfessor.findById(id).orElse(null);
+	}
+
+	@Override
+	public List<Professor> procurarProfessorEmail(String email) {
+		return colecaoProfessor.findByEmailContaining(email);
+	}
+
+	@Override
+	public List<Professor> procurarProfessorDisciplina(String disciplina) {
+		return colecaoProfessor.findByDisciplinaContaining(disciplina);
+	}
 	
 
 }

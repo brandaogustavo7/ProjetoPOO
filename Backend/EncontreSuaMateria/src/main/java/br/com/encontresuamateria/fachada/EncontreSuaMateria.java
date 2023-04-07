@@ -28,33 +28,42 @@ public class EncontreSuaMateria {
 	public Conta procurarContaId(long id) {
 		return cadastroConta.procurarContaId(id);
 	}
+	public void deletarConta(Conta c) {
+		cadastroConta.deletarConta(c);
+	}
+	
+	public Professor procurarProfessorId(long id) {
+		return cadastroProfessor.procurarProfessorId(id);
+	}
+	public List<Professor> procurarProfessorEmail(String email){
+		return cadastroProfessor.procurarProfessorEmail(email);
+	}
+	public List<Professor> listarTodosProfessores(){
+		return cadastroProfessor.listarProfessores();
+	}
+	
 	public Professor criarContaProfessor(Professor entity) {
 		return cadastroProfessor.salvarProfessor(entity);
+	}
+	
+	public Aluno procurarAlunoId(long id) {
+		return cadastroAluno.procurarAlunoId(id);
+	}
+
+	
+	public List<Aluno> listarTodosAlunos(){
+		return cadastroAluno.listarAlunos();
 	}
 	public Aluno criarContaAluno(Aluno entity) {
 		return cadastroAluno.salvarAluno(entity);
 	}
 	//criarachamadadoperfil
-	public List<Professor> procurarProfessorNome(String nome) {
-		return cadastroProfessor.procurarProfessorNome(nome);
-		
-	}
-	public Conta salvarConta(Conta c) {
-		return cadastroConta.salvarConta(c);
-	}
-	public void deletarConta(Conta c) {
-		cadastroConta.deletarConta(c);
-	}
 	
-	public void criarConta(Conta entity, String usuario, String email, String senha) {
-		this.criarConta(entity, usuario, email, senha);
-	}
-	/* 
-	public Professor encontrarProfessor(Professor professor) {
-		return this.valor;
-	}
-	public void burcasPorPreco(float valor) {
-		this.Usuario.valo
-	}*/
+	
+	
+	
+
+	
+	
 
 }

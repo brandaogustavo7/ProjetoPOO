@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Aluno extends Conta{
+public class Aluno {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

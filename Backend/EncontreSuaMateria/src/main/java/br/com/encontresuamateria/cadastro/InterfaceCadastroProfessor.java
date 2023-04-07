@@ -7,6 +7,8 @@ public interface InterfaceCadastroProfessor{
 	Professor salvarProfessor(Professor entity);
 	List<Professor> procurarProfessorNome(String nome);
 	List<Professor> listarProfessores();
-	
+	Professor procurarProfessorId(long id);
+	List<Professor> procurarProfessorEmail(String email);
+	List<Professor> procurarProfessorDisciplina(String disciplina);
 
 }
