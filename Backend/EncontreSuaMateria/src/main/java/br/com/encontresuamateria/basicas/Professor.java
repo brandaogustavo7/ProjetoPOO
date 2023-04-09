@@ -2,6 +2,8 @@ package br.com.encontresuamateria.basicas;
 
 import java.util.List;
 
+import ch.qos.logback.core.subst.Token.Type;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 
 import jakarta.persistence.OneToMany;
@@ -12,12 +14,13 @@ public class Professor extends Conta{
 	
 
 	private String disciplina;
+	
 	private float valorHoraAula;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Formacao> formacao;
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Agenda agenda;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Experiencia> experiencia;
 	
 	public Professor () {}
@@ -59,6 +62,8 @@ public class Professor extends Conta{
 		this.experiencia = experiencia;
 	}
 
-
+	public void atualizarFormacao(Formacao entity) {
+		this.formacao.add(entity);
+	}
 	
 }

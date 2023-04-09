@@ -25,8 +25,14 @@ public class CadastroConta implements InterfaceCadastroConta{
 	}
 
 	@Override
-	public Conta salvarConta(Conta c) {
-		return colecaoConta.save(c);
+	public Conta salvarConta(Conta c) throws ContaExistenteException{
+	//	try {
+			procurarContaEmail(c.getEmail());
+		//	throw new ContaExistenteException();
+	//	}catch(ContaNaoExistenteException ex) {
+			return colecaoConta.save(c);
+	//	}
+	
 	}
 
 	@Override

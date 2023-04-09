@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import br.com.encontresuamateria.basicas.Aluno;
 import br.com.encontresuamateria.basicas.Conta;
 import br.com.encontresuamateria.basicas.Professor;
+import br.com.encontresuamateria.cadastro.ContaExistenteException;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroAluno;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroConta;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroProfessor;
@@ -42,14 +43,16 @@ public class EncontreSuaMateria {
 		return cadastroProfessor.listarProfessores();
 	}
 	
-	public Professor criarContaProfessor(Professor entity) {
+	public Professor criarContaProfessor(Professor entity) throws ContaExistenteException {
 		return cadastroProfessor.salvarProfessor(entity);
 	}
 	
 	public Aluno procurarAlunoId(long id) {
 		return cadastroAluno.procurarAlunoId(id);
 	}
-
+	public Aluno procurarAlunoEmail(String email) {
+		return (Aluno) cadastroAluno.procurarAlunoEmail(email);
+	}
 	
 	public List<Aluno> listarTodosAlunos(){
 		return cadastroAluno.listarAlunos();

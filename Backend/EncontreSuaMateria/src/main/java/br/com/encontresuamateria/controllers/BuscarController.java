@@ -23,4 +23,6 @@ public class BuscarController {
 		return ResponseEntity.ok(encontre.listarTodosAlunos());
 	}
 
+
+	
 }
