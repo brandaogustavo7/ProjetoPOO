@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public class Conta {
+public abstract class Conta {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,11 +68,7 @@ public class Conta {
 	public void criaConta(String usuario, String email, String senha) {
 		
 	}
-	public void tipoContaProfessor() {}
-	
-	public void tipoContaAluno() {
-		
-	}
+
 	
 	public long getId() {
 		return id;

@@ -10,7 +10,7 @@ import br.com.encontresuamateria.basicas.Conta;
 @Repository
 public interface ColecaoConta extends JpaRepository<Conta, Long>{
 	
-	public List<Conta> findByEmailContaining(String email);
+	public Conta findByEmailContaining(String email);
 	public List<Conta> findByIdContaining(String id);
 	public List<Conta> findByUsuarioContaining(String usuario);
 

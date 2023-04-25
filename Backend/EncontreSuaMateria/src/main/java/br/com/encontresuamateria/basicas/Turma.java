@@ -17,9 +17,9 @@ public class Turma {
 	private long id;
 	@OneToMany
 	private List<Aluno> alunoMatriculado;
+
 	@OneToOne
-	private Professor professor;
-	private String disciplina;
+	private Disciplina disciplina;
 	
 	public Turma() {}
 	
@@ -37,18 +37,12 @@ public class Turma {
 		this.alunoMatriculado = alunoMatriculado;
 	}
 	
-	public Professor getProfessor() {
-		return professor;
-	}
-	public void setProfessor(Professor professor) {
-		this.professor = professor;
-	}
 	
-	public String getDisciplina() {
+	public Disciplina getDisciplina() {
 		return disciplina;
 	}
 
-	public void setDisciplina(String disciplina) {
+	public void setDisciplina(Disciplina disciplina) {
 		this.disciplina = disciplina;
 	}
 	

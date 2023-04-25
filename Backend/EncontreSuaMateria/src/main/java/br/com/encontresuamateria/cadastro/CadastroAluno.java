@@ -33,7 +33,7 @@ public class CadastroAluno implements InterfaceCadastroAluno{
 	}
 
 	@Override
-	public List<Aluno> procurarAlunoEmail(String email) {
+	public Aluno procurarAlunoEmail(String email){
 		return null;
 	}
 

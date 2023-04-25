@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import br.com.encontresuamateria.basicas.Professor;
 import br.com.encontresuamateria.colecaodedados.ColecaoProfessor;
 
@@ -14,8 +15,13 @@ public class CadastroProfessor implements InterfaceCadastroProfessor{
 	private ColecaoProfessor colecaoProfessor;
 
 	@Override
-	public Professor salvarProfessor(Professor entity) {
-		return colecaoProfessor.save(entity);
+	public Professor salvarProfessor(Professor entity) throws ContaExistenteException{
+		try {
+			procurarProfessorEmail(entity.getEmail());
+			throw new ContaExistenteException();
+		}catch(ContaNaoExistenteException ex){
+			return colecaoProfessor.save(entity);
+		}
 	}
 
 	@Override
@@ -34,8 +40,11 @@ public class CadastroProfessor implements InterfaceCadastroProfessor{
 	}
 
 	@Override
-	public List<Professor> procurarProfessorEmail(String email) {
-		return colecaoProfessor.findByEmailContaining(email);
+	public Professor procurarProfessorEmail(String email) throws ContaNaoExistenteException {
+		Professor c = colecaoProfessor.findByEmailContaining(email);
+		if(c != null)
+			return c;
+		throw new ContaNaoExistenteException();
 	}
 
 	@Override

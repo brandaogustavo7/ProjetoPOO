@@ -9,11 +9,12 @@ import br.com.encontresuamateria.basicas.Aluno;
 import br.com.encontresuamateria.basicas.Conta;
 import br.com.encontresuamateria.basicas.Professor;
 import br.com.encontresuamateria.cadastro.ContaExistenteException;
+import br.com.encontresuamateria.cadastro.ContaNaoExistenteException;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroAluno;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroConta;
 import br.com.encontresuamateria.cadastro.InterfaceCadastroProfessor;
 
-//import br.com.encontresuamateria.basicas.Professor;
+import br.com.encontresuamateria.basicas.Professor;
 
 @Service
 public class EncontreSuaMateria {
@@ -33,34 +34,38 @@ public class EncontreSuaMateria {
 		cadastroConta.deletarConta(c);
 	}
 	
-	public Professor procurarProfessorId(long id) {
+	public Professor procurarProfessorId(long id) throws ContaNaoExistenteException{
 		return cadastroProfessor.procurarProfessorId(id);
 	}
-	public List<Professor> procurarProfessorEmail(String email){
+	public Professor procurarProfessorEmail(String email) throws ContaNaoExistenteException{
 		return cadastroProfessor.procurarProfessorEmail(email);
 	}
 	public List<Professor> listarTodosProfessores(){
 		return cadastroProfessor.listarProfessores();
+	}
+	public List<Professor>procurarProfessorDisciplina(String disciplina){
+		return cadastroProfessor.procurarProfessorDisciplina(disciplina);
 	}
 	
 	public Professor criarContaProfessor(Professor entity) throws ContaExistenteException {
 		return cadastroProfessor.salvarProfessor(entity);
 	}
 	
-	public Aluno procurarAlunoId(long id) {
+	public Aluno procurarAlunoId(long id) throws ContaNaoExistenteException {
 		return cadastroAluno.procurarAlunoId(id);
 	}
-	public Aluno procurarAlunoEmail(String email) {
+	public Aluno procurarAlunoEmail(String email) throws ContaNaoExistenteException {
 		return (Aluno) cadastroAluno.procurarAlunoEmail(email);
 	}
 	
 	public List<Aluno> listarTodosAlunos(){
 		return cadastroAluno.listarAlunos();
 	}
-	public Aluno criarContaAluno(Aluno entity) {
+	public Aluno criarContaAluno(Aluno entity) throws ContaExistenteException{
 		return cadastroAluno.salvarAluno(entity);
 	}
 	//criarachamadadoperfil
+	
 	
 	
 	

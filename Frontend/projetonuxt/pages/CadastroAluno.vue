@@ -4,7 +4,8 @@
     </div>
 </template>
 <script>
-import CadastroAlunoForm from '../components/CadastroAlunoForm.vue';
+import Service from '@/service/EncontreService';
+import CadastroAlunoForm from '../layouts/CadastroAlunoForm.vue';
 
 export default {
 name: "CadastroAluno",

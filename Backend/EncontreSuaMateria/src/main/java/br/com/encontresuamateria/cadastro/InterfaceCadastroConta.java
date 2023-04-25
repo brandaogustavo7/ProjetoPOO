@@ -8,7 +8,7 @@ public interface InterfaceCadastroConta {
 	
 	Conta procurarContaId(long id);
 	
-	List<Conta> procurarContaEmail(String email)throws ContaNaoExistenteException, ContaNaoExistenteException;
+	Conta procurarContaEmail(String email)throws ContaNaoExistenteException, ContaNaoExistenteException;
 
 	Conta salvarConta(Conta c)throws ContaExistenteException;
 

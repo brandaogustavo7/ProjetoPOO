@@ -8,7 +8,7 @@ import br.com.encontresuamateria.basicas.Aluno;
 public interface InterfaceCadastroAluno {
 	Aluno procurarAlunoId(long id);
 	Aluno salvarAluno(Aluno entity);
-	List<Aluno> procurarAlunoEmail(String email);
+	Aluno procurarAlunoEmail(String email);
 	List<Aluno> listarAlunos();
 
 }

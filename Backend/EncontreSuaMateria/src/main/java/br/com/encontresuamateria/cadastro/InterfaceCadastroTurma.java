@@ -10,7 +10,7 @@ public interface InterfaceCadastroTurma {
 	
 	Turma procurarTurmaId(long id);
 	
-	List<Turma> procurarTurmaProfessor(Professor professor);
+	
 	
 	List<Turma> procurarTurmaDisciplina(Disciplina disciplina);
 	

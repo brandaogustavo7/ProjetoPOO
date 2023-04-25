@@ -21,10 +21,6 @@ public class CadastroTurma implements InterfaceCadastroTurma{
 		return colecaoTurma.findById(id).orElse(null);
 	}
 
-	@Override
-	public List<Turma> procurarTurmaProfessor(Professor professor) {
-		return colecaoTurma.findByProfessorContaining(professor);
-	}
 
 	@Override
 	public List<Turma> procurarTurmaDisciplina(Disciplina disciplina) {
